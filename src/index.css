@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: marisa;
+  src: url(/fonts/cm-classy-marisa-elegant-typeface-4090012/OTF/Marisa-Bold.otf);
+  font-weight: normal;
+  }
