@@ -1,4 +1,4 @@
-import QuestionBuilder from '../../components/QuestionBuilder/QuestionBuilder'
+import QuestionBuilder from '../../../components/teacher/QuestionBuilder/QuestionBuilder'
 
 function TeacherQuestionsCreator() {
   return (

@@ -1,4 +1,4 @@
-import StudentQuestion from '../../components/StudentQuestion/StudentQuestion'
+import StudentQuestion from '../../../components/student/StudentQuestion/StudentQuestion'
 
 function StudentQuestions() {
   return (
