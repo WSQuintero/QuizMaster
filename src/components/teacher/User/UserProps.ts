@@ -1,5 +1,5 @@
 interface UserProps {
-  name: string
+  name: "student"|"teacher"
 }
 
 export default UserProps
