@@ -4,12 +4,12 @@ import { Context } from '../../../Context/Context'
 import { useNavigate } from 'react-router'
 
 function TeacherInitialPage (): JSX.Element {
+  const navigate = useNavigate()
   const context = useContext(Context)
   if (context == null) {
     return <div/>
   }
   const { setQuestionsTeacher, setAnswersTeacher, answersTeacher, questionsTeacher } = context
-  const navigate = useNavigate()
 
   useEffect(() => {
     if (answersTeacher !== 0 && questionsTeacher !== 0) {
