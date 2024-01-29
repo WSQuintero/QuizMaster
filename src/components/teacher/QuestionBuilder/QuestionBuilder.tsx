@@ -1,7 +1,8 @@
+import React from 'react'
 import AnswerOptions from './AnswerOptions/AnswerOptions'
-import QuestionBuilderProps from './QuestionBuilderProps'
+import type QuestionBuilderProps from './QuestionBuilderProps'
 
-function QuestionBuilder({ numberQuestion }: QuestionBuilderProps) {
+function QuestionBuilder ({ numberQuestion }: QuestionBuilderProps): JSX.Element {
   return (
     <article className='w-full'>
       <div className='text-lg font-bold  sm:text-xl  p-2 bg-gradient-to-r from-green-300 via-violet-400 to-purple-600 w-full  flex justify-center items-center'>

@@ -1,14 +1,16 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import QuestionBuilder from '../../../../components/teacher/QuestionBuilder/QuestionBuilder'
 import { Context } from '../../../../Context/Context'
+import { type questionsTeacher } from '../../../../Context/ContextProps'
 
-function QuestionOptions() {
-  const context = useContext(Context)
-  if (!context) return
+function QuestionOptions (): JSX.Element | undefined {
+  const { questionsTeacher } = useContext(Context) as questionsTeacher
+
   const numberQuestions: number[] = Array.from(
-    { length: context.questionsTeacher },
+    { length: questionsTeacher },
     (_, index) => index + 1
   )
+
   return (
     <>
       {numberQuestions?.map((test, index) => (

@@ -1,7 +1,8 @@
+import React from 'react'
 import User from '../../components/teacher/User/user'
 import './HomePage.css'
 
-function HomePage() {
+function HomePage (): JSX.Element {
   return (
     <section className='border border-violet-400 xl:h-[100vh] w-full bg-violet-100/50 p-4 xl:max-h-[100vh] overflow-hidden background rounded-3xl shadow-xl shadow-slate-700'>
       <div className='w-full flex justify-center'>

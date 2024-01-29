@@ -1,7 +1,7 @@
-import { RouterProps } from "react-router";
+import { type RouterProps } from 'react-router'
 
 interface RouterProviderProps {
-  router: RouterProps;
+  router: RouterProps
 }
 
 export default RouterProviderProps

@@ -8,10 +8,11 @@ import StudentQuestions from '../pages/student/StudentQuestions/StudentQuestions
 import StudentAnswers from '../pages/student/StudentAnswers/StudentAnswers'
 import StudentResultAnswers from '../pages/student/StudentResultAnswers/StudentResultAnswers'
 import App from '../App'
+import React from 'react'
 
 const router = createBrowserRouter([
   {
-    path: '/home',
+    path: '/',
     element: <App />
   },
   {

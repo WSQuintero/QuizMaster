@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router'
-import UserProps from './UserProps'
+import type UserProps from './UserProps'
+import React from 'react'
 
-function User({ name }: UserProps) {
+function User ({ name }: UserProps): JSX.Element {
   const navigate = useNavigate()
-  const handleOpenUser = () => {
+  const handleOpenUser = (): void => {
     navigate(`/${name}`)
   }
 

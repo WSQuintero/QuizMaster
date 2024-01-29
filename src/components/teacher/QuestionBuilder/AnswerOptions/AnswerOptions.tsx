@@ -1,9 +1,9 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { Context } from '../../../../Context/Context'
 
-function AnswerOptions() {
+function AnswerOptions (): JSX.Element {
   const context = useContext(Context)
-  if (!context) return
+  if (context == null) return <div/>
   const numberAnswers: number[] = Array.from(
     { length: context.answersTeacher },
     (_, index) => index + 1

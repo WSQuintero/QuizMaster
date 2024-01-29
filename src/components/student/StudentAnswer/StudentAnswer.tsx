@@ -1,6 +1,7 @@
-import StudentAnswerProps from './StudentAnswerProps'
+import React from 'react'
+import type StudentAnswerProps from './StudentAnswerProps'
 
-function StudentAnswer({ numberQuestion }: StudentAnswerProps) {
+function StudentAnswer ({ numberQuestion }: StudentAnswerProps): JSX.Element {
   return (
     <article className='w-full'>
       <div className='text-lg font-bold  sm:text-xl  p-2 bg-gradient-to-r from-green-300 via-violet-400 to-purple-600 w-full  flex justify-center items-center h-full'>

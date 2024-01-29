@@ -1,6 +1,7 @@
-import StudentQuestionProps from './StudentQuestionProps'
+import React from 'react'
+import type StudentQuestionProps from './StudentQuestionProps'
 
-function StudentQuestion({ numberQuestion }: StudentQuestionProps) {
+function StudentQuestion ({ numberQuestion }: StudentQuestionProps): JSX.Element {
   return (
     <article className='w-full'>
       <div className='text-lg font-bold  sm:text-xl  p-2 bg-gradient-to-r from-green-300 via-violet-400 to-purple-600 w-full  flex justify-center items-center h-full'>
@@ -29,8 +30,8 @@ function StudentQuestion({ numberQuestion }: StudentQuestionProps) {
               </p>
               <input
                 type='radio'
-                name={`si`}
-                id={`si`}
+                name={'si'}
+                id={'si'}
                 className='w-[20px] h-[20px]'></input>
             </div>
           ))}
