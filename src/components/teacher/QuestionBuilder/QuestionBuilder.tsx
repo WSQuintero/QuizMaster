@@ -1,3 +1,4 @@
+import AnswerOptions from './AnswerOptions/AnswerOptions'
 import QuestionBuilderProps from './QuestionBuilderProps'
 
 function QuestionBuilder({ numberQuestion }: QuestionBuilderProps) {
@@ -13,23 +14,9 @@ function QuestionBuilder({ numberQuestion }: QuestionBuilderProps) {
         />
       </div>
 
-      <form
-        action=''
-        className='mb-0 mt-8 space-y-4 flex justify-center flex-col w-full p-4'>
+      <form className='mb-0 mt-8 space-y-4 flex justify-center flex-col w-full p-4'>
         <div className='flex flex-col gap-4'>
-          {[1, 2, 3, 4].map((index) => (
-            <div key={index} className='relative w-full'>
-              <label
-                htmlFor={`answer-${index}`}
-                className='sr-only'>{`Posible respuesta ${index}`}</label>
-              <input
-                type='text'
-                id={`answer-${index}`}
-                className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm flex placeholder:text-violet-800/40 placeholder:font-semibold'
-                placeholder={`Posible respuesta ${index}`}
-              />
-            </div>
-          ))}
+          <AnswerOptions />
         </div>
         <div className='flex items-center justify-center'>
           <button
