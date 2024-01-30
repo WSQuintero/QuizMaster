@@ -1,7 +1,10 @@
-export const handleCreateNewForm = (event: React.FormEvent<HTMLFormElement> ,setQuestionsTeacher:React.Dispatch<React.SetStateAction<number>>,setAnswersTeacher:React.Dispatch<React.SetStateAction<number>>) => {
+import type TeacherInitialPageProps from './TeacherInitialPageProps'
+
+export const handleCreateNewForm = ({ event, updateTeacherQuestions, updateTeacherAnswers }: TeacherInitialPageProps): void => {
   event.preventDefault()
-  const formElement = event.target as HTMLFormElement | null
-  if (!formElement) {
+
+  const formElement = event.currentTarget as HTMLFormElement | null
+  if (formElement == null) {
     return
   }
 
@@ -14,7 +17,6 @@ export const handleCreateNewForm = (event: React.FormEvent<HTMLFormElement> ,set
 
   const questions = questionsElement?.value as unknown as number
   const answers = answersElement?.value as unknown as number
-
-  setQuestionsTeacher(questions)
-  setAnswersTeacher(answers)
+  updateTeacherQuestions(questions)
+  updateTeacherAnswers(answers)
 }

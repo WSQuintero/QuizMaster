@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
-import { Context } from '../../../../Context/Context'
+import React from 'react'
+import { useStoreTeacherAnswers } from '../../../../globalStates/teacherAnswersState/teacherAnswersState'
 
 function AnswerOptions (): JSX.Element {
-  const context = useContext(Context)
-  if (context == null) return <div/>
+  const { teacherAnswers } = useStoreTeacherAnswers()
+
   const numberAnswers: number[] = Array.from(
-    { length: context.answersTeacher },
+    { length: teacherAnswers },
     (_, index) => index + 1
   )
   return (

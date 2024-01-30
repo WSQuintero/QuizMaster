@@ -1,21 +1,19 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { handleCreateNewForm } from './TeacherInitialPageFunctions'
-import { Context } from '../../../Context/Context'
 import { useNavigate } from 'react-router'
+import { useStoreTeacherQuestions } from '../../../globalStates/teacherQuestionsState/teacherQuestionsState'
+import { useStoreTeacherAnswers } from '../../../globalStates/teacherAnswersState/teacherAnswersState'
 
 function TeacherInitialPage (): JSX.Element {
+  const { updateTeacherQuestions, teacherQuestions } = useStoreTeacherQuestions()
+  const { updateTeacherAnswers, teacherAnswers } = useStoreTeacherAnswers()
   const navigate = useNavigate()
-  const context = useContext(Context)
-  if (context == null) {
-    return <div/>
-  }
-  const { setQuestionsTeacher, setAnswersTeacher, answersTeacher, questionsTeacher } = context
 
   useEffect(() => {
-    if (answersTeacher !== 0 && questionsTeacher !== 0) {
+    if (teacherAnswers !== 0 && teacherQuestions !== 0) {
       navigate('/teacher/questions-creator')
     }
-  }, [answersTeacher, questionsTeacher])
+  }, [teacherQuestions, teacherAnswers])
 
   return (
     <section className='w-full h-[100vh] flex justify-center items-center bg-violet-100/50 background rounded-3xl shadow-xl shadow-slate-700'>
@@ -37,7 +35,7 @@ function TeacherInitialPage (): JSX.Element {
         </div>
 
         <form
-          onSubmit={(event) => { handleCreateNewForm(event, setQuestionsTeacher, setAnswersTeacher) }
+          onSubmit={(event) => { handleCreateNewForm({ event, updateTeacherQuestions, updateTeacherAnswers }) }
           }
           className=' mb-0 mt-8  space-y-4 flex justify-center flex-col w-full'>
           <div>
