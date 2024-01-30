@@ -11,10 +11,11 @@ function QuestionOptions (): JSX.Element | undefined {
 
   return (
     <>
-      {numberQuestions?.map((test, index) => (
-        <QuestionBuilder key={index + test} numberQuestion={test} />
+      {numberQuestions?.map((test) => (
+        <QuestionBuilder numberQuestion={test} key={`question-${test}`} />
       ))}
     </>
   )
 }
+
 export default QuestionOptions
