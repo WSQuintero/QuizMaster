@@ -11,7 +11,7 @@ function QuestionCreated ({
   const asnwerStyles = (answer: string): string =>
     clsx(
       answer === correctAnswer
-        ? 'border border-green-500 relative w-full'
+        ? 'border-4 border-green-500 relative w-full'
         : 'border border-gray-500 relative w-full'
     )
 
