@@ -1,6 +1,6 @@
 import React from 'react'
-import QuestionBuilder from '../../../../components/teacher/QuestionBuilder/QuestionBuilder'
-import { useStoreTeacherQuestions } from '../../../../globalStates/teacherQuestionsState/teacherQuestionsState'
+import QuestionBuilder from '../QuestionBuilder/QuestionBuilder'
+import { useStoreTeacherQuestions } from '../../../globalStates/teacherQuestionsState/teacherQuestionsState'
 
 function QuestionOptions (): JSX.Element | undefined {
   const { teacherQuestions } = useStoreTeacherQuestions()

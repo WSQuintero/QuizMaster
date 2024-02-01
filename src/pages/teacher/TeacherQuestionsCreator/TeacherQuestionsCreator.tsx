@@ -1,5 +1,5 @@
 import React from 'react'
-import QuestionOptions from './QuestionOptions/QuestionOptions'
+import QuestionOptions from '../../../components/teacher/QuestionOptions/QuestionOptions'
 
 function TeacherQuestionsCreator (): JSX.Element {
   return (

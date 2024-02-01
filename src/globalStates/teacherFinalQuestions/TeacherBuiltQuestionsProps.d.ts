@@ -11,4 +11,6 @@ interface StoreBuiltQuestions {
   builtQuestions: BuiltQuestion[]
   updateBuiltQuestion: (newBuiltQuestion: BuiltQuestion) => void
 }
-export type { StoreBuiltQuestions, BuiltQuestion, CorrectAnswer, NumberQuestion }
+type UpdateBuiltQuestion = Pick<UpdateBuiltQuestion, 'updateBuiltQuestion'>['updateBuiltQuestion']
+
+export type { StoreBuiltQuestions, BuiltQuestion, CorrectAnswer, NumberQuestion, UpdateBuiltQuestion }

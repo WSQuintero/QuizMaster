@@ -3,4 +3,6 @@ interface StoreTeacherQuestions {
   updateTeacherQuestions: (teacherQuestions: number) => void
 }
 
-export type { StoreTeacherQuestions }
+type TeacherQuestions = Pick<StoreTeacherQuestions, 'teacherQuestions'>['teacherQuestions']
+
+export type { StoreTeacherQuestions, TeacherQuestions }
