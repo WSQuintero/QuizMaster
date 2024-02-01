@@ -1,6 +1,10 @@
 import type TeacherInitialPageProps from './TeacherInitialPageProps'
 
-export const handleCreateNewForm = ({ event, updateTeacherQuestions, updateTeacherAnswers }: TeacherInitialPageProps): void => {
+export const handleCreateNewForm = ({
+  event,
+  updateTeacherQuestions,
+  updateTeacherAnswers
+}: TeacherInitialPageProps): void => {
   event.preventDefault()
 
   const formElement = event.currentTarget as HTMLFormElement | null
@@ -11,6 +15,7 @@ export const handleCreateNewForm = ({ event, updateTeacherQuestions, updateTeach
   const questionsElement = formElement.elements.namedItem(
     'questions'
   ) as HTMLInputElement | null
+
   const answersElement = formElement.elements.namedItem(
     'answers'
   ) as HTMLInputElement | null

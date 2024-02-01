@@ -22,10 +22,18 @@ interface HandleAddNewQuestionProps {
   teacherAnswers: TeacherAnswers
   updateBuiltQuestion: UpdateBuiltQuestion
   numberQuestion: NumberQuestion
-  questionRef: (React.MutableRefObject<HTMLTextAreaElement | null>)
+  questionRef: React.MutableRefObject<HTMLTextAreaElement | null>
 }
 
 type NumberQuestion = Pick<QuestionBuilderProps, 'numberQuestion'>['numberQuestion']
+
 type ListOfAnswers = Pick<UpdateListOfAnswersReturn, 'listOfAnswers'>['listOfAnswers']
 
-export type { QuestionBuilderProps, NumberQuestion, UpdateListOfAnswersProps, UpdateListOfAnswersReturn, ListOfAnswers, HandleAddNewQuestionProps }
+export type {
+  QuestionBuilderProps,
+  NumberQuestion,
+  UpdateListOfAnswersProps,
+  UpdateListOfAnswersReturn,
+  ListOfAnswers,
+  HandleAddNewQuestionProps
+}

@@ -1,5 +1,5 @@
 interface StudentQuestionProps {
-  numberQuestion: number
+  numberQuestion: number;
 }
 
-export default StudentQuestionProps
+export default StudentQuestionProps;
